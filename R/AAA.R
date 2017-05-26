@@ -1,6 +1,3 @@
-checker <- new.env(parent = emptyenv())
-
-
 #' @title Load checkers config
 #'
 #' @description Loads the config file into options which are
@@ -20,7 +17,7 @@ load_config = function(filename) {
 
   checkers <- yaml.load_file(filename)
 
-  checker$options <- checkers
+  options(checker = list(options = checkers))
 }
 
 
