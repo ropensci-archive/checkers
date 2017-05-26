@@ -32,4 +32,6 @@ gp_check <- function(path = ".", checks = all_checks(), extra_preps = NULL,
                extra_preps = extra_preps,
                extra_checks = extra_checks,
                quiet = quiet)
+
+  return(gp_out)
 }

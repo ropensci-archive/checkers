@@ -1,5 +1,6 @@
 # To test this:
-# gp(path=".", checks = "version_control",
+# x <- gp_check(path=system.file("scripts", package="checkers"),
+#          checks = "version_control",
 #   extra_preps = list(version_control = prep_version_control),
 #   extra_checks = list(version_control = check_version_control))
 
