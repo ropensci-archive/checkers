@@ -13,6 +13,8 @@ BugReports: https://github,com/ropenscilabs/checkers/issues
 RoxygenNote: 6.0.1
 Imports:
     goodpractice,
+    lintr,
+    rex,
     purrr,
     yaml
 Remotes:
