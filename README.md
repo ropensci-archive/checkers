@@ -8,7 +8,7 @@ Checkers is a framework for reviewing and automated checking of best practices f
 
 ## Package to assess analysis + review guide for analysis best practice
  
-`checkers` is an extension of goodpractice (for building R packages) but for your analysis workflow. This package will provide both automatized checks for best practises as well as a descriptive guide for best practises. The guide categorizes best practises in terms of their importance (Tier 1-3) and whether they are automatable.
+`checkers` is an extension of `goodpractice` (for building R packages) but for your analysis workflow. This package will provide both automatized checks for best practises as well as a descriptive guide for best practises. The guide categorizes best practises in terms of their importance (Tier 1-3) and whether they are automatable.
 
 
 Goals
@@ -41,7 +41,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Commenting
 - **Description :** It is important to comment your code so that you can remember what you have written and created. It also allows you to share with other people.
 - **Example :** Check to see if you have commented each code chunk. What is the % of comments contained in your code?
-- **CheckR packages:** YES could be automated
+- **checker packages:** YES could be automated
  
 ### 2.  **Automatable & "Nice to have"**
  
@@ -51,7 +51,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Example :** Check to see if you have a git file    
 - **CheckR packages :** YES could be automated
  
-### 3.  **Automatable & "Recommendation"**
+### 3.  **Automatable & "Recommended"**
  
 - **Research phase :** Visualisation/Reporting   
 - **Name :** Grammar/Spelling    
