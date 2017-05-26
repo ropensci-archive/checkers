@@ -27,6 +27,11 @@ prep_version_control <- make_prep("version_control", function(path, quiet) {
 
 #' @export
 #' @importFrom goodpractice make_check
+#' @examples
+#' gp_check(path=system.file("scripts", package="checkers"),
+#          checks = "version_control",
+#   extra_preps = list(version_control = prep_version_control),
+#   extra_checks = list(version_control = check_version_control))
 check_version_control <- make_check(
 
   description = "Project is under version control",
