@@ -16,8 +16,7 @@ all checks.}
 \item{extra_preps}{Custom preparation functions. See
 \code{\link[goodpractice]{make_prep}} on creating preparation functions.}
 
-\item{extra_checks}{Custom checks. See \code{\link[goodpractice]{make_check}} on
-creating checks.}
+\item{extra_checks}{Custom checks.}
 
 \item{quiet}{Whether to suppress output from the preparation
 functions. Note that not all preparation functions produce output,

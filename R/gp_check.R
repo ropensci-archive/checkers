@@ -5,8 +5,7 @@
 #'   all checks.
 #' @param extra_preps Custom preparation functions. See
 #'   \code{\link[goodpractice]{make_prep}} on creating preparation functions.
-#' @param extra_checks Custom checks. See \code{\link[goodpractice]{make_check}} on
-#'   creating checks.
+#' @param extra_checks Custom checks.
 #' @param quiet Whether to suppress output from the preparation
 #'   functions. Note that not all preparation functions produce output,
 #'   even if this option is set to \code{FALSE}.
