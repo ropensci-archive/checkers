@@ -18,7 +18,8 @@ Imports:
     lintr,
     rex,
     purrr,
-    yaml
+    yaml,
+    packrat
 Remotes:
     MangoTheCat/goodpractice
 Suggests:

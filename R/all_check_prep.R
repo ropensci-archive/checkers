@@ -9,6 +9,10 @@ all_checkers <- function(){
     main_defaults <- c(main_defaults, options()$checkers[["goodpractice"]])
   }
 
+  if(length(options()$checkers[["make_pref_pkg_check"]]) > 0){
+    main_defaults <- c(main_defaults, names(options()$checkers[["make_pref_pkg_check"]]))
+  }
+
   return(main_defaults)
 }
 
@@ -26,5 +30,6 @@ all_extra_checkers <- function(){
 all_prepers <- function(){
   return(list("scripts" = prep_scripts,
               "version_control" = prep_version_control,
-              "lintr" = prep_lint_dir))
+              "lintr" = prep_lint_dir,
+              "packages" = prep_packages))
 }

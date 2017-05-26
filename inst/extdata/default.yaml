@@ -9,10 +9,10 @@ goodpractice:
   "lintr_library_require_linter",
   "lintr_seq_linter"]
 make_pref_pkg_check:
-  -
+  XML:
     favored: xml2
     unfavored: ["XML"]
-  -
+  JSON:
     favored: jsonlite
     unfavored: rjson
 if_this_than_that: ["gam","gam.check"] #if gam than gam.check
