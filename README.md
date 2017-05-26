@@ -30,9 +30,18 @@ Goals
 * Analysis Tasks
 * Visualisation/Reporting
 
-### [Full list of checks available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
- 
- 
+### [Full list of best practise guidelines available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
+
+### Automation Levels
+- **Fully automatable:** Can be checked automatically by checkers (CURRENTLY GREEN)
+- **Semi-automatable:** Needs a human to provide commands on specific checks; can be done using custom implementations of checkers/goodpractice (CURRENTLY BLUE)
+- **Human-powered:** Analyst uses guidelines to make sure analysis and report fit best practice for specific context (CURRENTLY RED)
+
+### Tiers
+- **Must have** : These elements are required for reliable and trustworthy analyses.
+- **Nice to have** : These elements are recommended for best practice and reproducibility and should be strongly considered.
+- **Recommended** : These elements are ideal best practice.
+
 ## Examples
 Example best practices in terms of their importance (y-axis) and the degree they can be automated (x-axis).
 ![](https://github.com/ropenscilabs/checkers/blob/master/figs/compendium.png)
@@ -50,7 +59,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Version control    
 - **Description :** It is important to store versions of your code as you program so you can go back to old versions of your analysis. This is important to help you debug and also help with collabration with others using tools like git/github or other version control providers.    
 - **Example :** Check to see if you have a git file    
-- **CheckR packages :** YES could be automated
+- **CheckR packages :** WORKING EXAMPLE AVAILABLE (add link)
  
 ### 3.  **Automatable & "Recommended"**
  
@@ -58,7 +67,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Grammar/Spelling    
 - **Description :** It is important that you have correct spelling and grammar in code and reporting.     
 - **Example :** Check that you have installed gramR *new* packag     
-- **CheckR packages :** YES gramR is in development
+- **CheckR packages :** gramR (in development) [https://github.com/ropenscilabs/gramr]
 
 
 # Vignettes examples
