@@ -1,11 +1,10 @@
 Package: checkers
 Title: checkers
 Version: 0.1.0
-Authors@R: c( person("Noam", "Ross", role =  c("aut","cre"),
-    email = "noam.ross@gmail.com"),
-    person("Laura", "DeCicco", role = c("aut"),
-    email = "ldecicco@usgs.gov"))
-Description: Package to assess analysis + review guide for analysis best practice
+Author: Noam Ross
+Maintainer: Noam Ross <noam.ross@gmail.com>
+Maintainer: Noam Ross <noam.ross@gmail.com>
+Description: checkers
 License: MIT + file LICENSE
 LazyData: true
 URL: https://github,com/ropenscilabs/checkers
