@@ -15,4 +15,10 @@ test_that("checkers works", {
            extra_checks = list(version_control = check_version_control))
   expect_type(check_results, "list")
 
+  check_all_results <- gp_check(path=system.file("scripts", package="checkers"),
+                              checks = all_checkers(),
+                              extra_preps = all_prepers(),
+                              extra_checks = all_extra_checkers())
+  expect_type(check_all_results, "list")
+
 })
