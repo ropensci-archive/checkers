@@ -12,7 +12,8 @@ BugReports: https://github,com/ropenscilabs/checkers/issues
 RoxygenNote: 6.0.1
 Imports:
     goodpractice,
-    purrr
+    purrr,
+    yaml
 Remotes:
     MangoTheCat/goodpractice
 Suggests: 
