@@ -1,0 +1,195 @@
+---
+title: "Guidelines for Analysis Best Practice"
+author: "Jennifer Thompson, Nicholas Tierney, Alice Daish, Molly Lewis, Noam Ross, Laura DeCiccio, Nistara Randhawa"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry(Vignette Title)
+  %\VignetteEngine(knitr::rmarkdown)
+  %\VignetteEncoding(UTF-8)
+---
+
+<!-- Try and add links to the tags (T1, T2, T3, Auto, Semi-Auto, human) -->
+<!-- http://pandoc.org/MANUAL.html#header-identifiers -->
+
+# Data
+
+## Know your Data (T1 Human)
+
+### Examples
+
+## Quality Checks (T1, Human)
+
+### Examples
+
+## Rawest data form (T1, Human)
+
+### Examples
+
+## Check and control for updated source data (T2, Semi-Auto)
+
+### Examples
+
+## Ownership clearly identified (T3, Human)
+
+### Examples
+
+# Scripts and Code
+
+## Fail fast if it fails (code needs to break fast to help improve) (T2, Human)
+
+### Examples
+
+## Robust to changes (T2, Semi-Auto)
+
+### Examples
+
+## Don't Repeat Yourself (T2, Semi-Auto)
+
+### Examples
+
+## Best Code Praxtices (T2, auto)
+
+### Examples
+
+## Platform agnostic (T2, auto)
+
+### Examples
+
+## Labelled chunks (T2, Auto)
+
+### Examples
+
+## Library (T3, Auto)
+
+### Examples
+
+## Streamlining objects in memory (T3, Auto)
+
+### Examples
+
+## License and ownership (T3, Auto)
+
+### Examples
+
+# Packages / Organisation
+
+## Neglected Packages (T1, Auto)
+
+### Examples
+
+## Readability (T1, Auto)
+
+### Examples
+
+## Expressive Object names (T2, Human)
+
+### Examples
+
+## Filestructure (T2, Semi-Automatic)
+
+### Examples
+
+## Long Blocks of old/commented out code (T2, Auto)
+
+### Examples
+
+## Version control (T2, Auto)
+
+### Examples
+
+## README for complex data structures (T2, Auto)
+
+### Examples
+
+## Package versions (Know your options) (T2, Auto)
+
+### Examples
+
+## Readability (Specifically, naming conventions) (T2, Auto)
+
+### Examples
+
+## Readability (Style: Adequate whitespace / indentation) (T3, Auto)
+
+### Examples
+
+# Analysis Tasks
+
+## Description of the root datasets (T1, human)
+
+### Examples
+
+## Description of all analyses (T1, Human)
+
+### Examples
+
+## Model Assumption Checks (T1, Semi-Auto)
+
+### Examples
+
+## Model Goodness of fit (T1, Semi-Auto)
+
+### Examples
+
+## Model Validation (T1, Semi-Auto)
+
+### Examples
+
+## Diagnostics (T1, Semi-Auto)
+
+### Examples
+
+## Plan to handle missingness (T1, Semi-Auto)
+
+### Examples
+
+## Model Results (T1, Semi-Auto)
+
+### Examples
+
+## Record of decisions (T2, Human)
+
+### Examples
+
+# Visualisation / Reporting
+
+## Informative Titles and Labels (T1, Human)
+
+### Examples
+
+## Final Product Geared for its intended audience (T1, Human)
+
+### Examples
+
+## Visualisation of conclusions (T1, Human)
+
+### Examples
+
+## Descriptive plots (T1, Semi-Auto)
+
+### Examples
+
+## Exploratory Data Analysis (T1, Semi-Auto)
+
+### Examples
+
+## Appropriately Conveyed Data Types (T1, Semi-Auto)
+
+### Examples
+
+## Clear Structure and Flow (T1, Automatic)
+
+### Examples
+
+## Reusable outputs (T2, Human)
+
+### Examples
+
+## Remove chartjunk (T3, Human)
+
+### Examples
+
+## Grammar and Spelling (T3, Auto)
+
+### Examples
