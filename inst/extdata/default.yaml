@@ -8,6 +8,12 @@ goodpractice:
   "lintr_sapply_linter",
   "lintr_library_require_linter",
   "lintr_seq_linter"]
-favored_packages: ["xml2","XML"] #favored vs older
+make_pref_pkg_check:
+  -
+    favored: xml2
+    unfavored: ["XML"]
+  -
+    favored: jsonlite
+    unfavored: rjson
 if_this_than_that: ["gam","gam.check"] #if gam than gam.check
 comment_threshold: 0.05
