@@ -21,5 +21,6 @@ Imports:
     yaml
 Remotes:
     MangoTheCat/goodpractice
-Suggests: 
-    testthat
+Suggests:
+    testthat,
+    covr
