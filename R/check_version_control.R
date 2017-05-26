@@ -39,7 +39,7 @@ check_version_control <- make_check(
   preps = c("version_control"),
   gp = function(state) {
     paste0(
-      "Place your project under version control.",
+      "Place your project under version control. ",
       "You are using neither git nor svn. See http://happygitwithr.com/ for more info"
     )
   },
