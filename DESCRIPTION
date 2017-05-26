@@ -2,9 +2,9 @@ Package: checkers
 Title: checkers
 Version: 0.1.0
 Authors@R: c( person("Noam", "Ross", role =  c("aut","cre"),
-    email = "jread@usgs.gov"),
+    email = "noam.ross@gmail.com"),
     person("Laura", "DeCicco", role = c("aut"),
-    email = "noam.ross@gmail.com"))
+    email = "ldecicco@usgs.gov"))
 Description: Package to assess analysis + review guide for analysis best practice
 License: MIT + file LICENSE
 LazyData: true
