@@ -21,9 +21,11 @@ The carrot (i.e a sticker/badge) vs. the stick.
 Types of Test/Checks/Assessment groups 
 
 * Data 
-* Code 
-* Model/Analysis 
-* Visualization
+* Script/Code (organization/structure)
+* Package/Organisational
+* Analysis Tasks 
+* Visualisation/Reporting
+
 
 > checkers
 
