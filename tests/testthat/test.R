@@ -28,6 +28,12 @@ test_that("checkers works", {
                       extra_preps = list(lintr = prep_lint_dir))
   expect_type(check_results, "list")
 
+  check_xml <- make_pref_pkg_check("XML", "xml2")
+  gp_check(path=system.file("scripts", package="checkers"),
+           checks="XML",
+           extra_preps=list(packages=prep_packages),
+           extra_checks = list(XML = check_xml))
+
 })
 
 
