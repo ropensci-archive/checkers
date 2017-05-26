@@ -53,6 +53,7 @@ check_well_commented <- make_check(
   },
   check = function(state) {
     threshold <- options()$checkers[["comment_threshold"]]
+   # browser()
     return(state$scripts$comment_frac > threshold)
   }
 )

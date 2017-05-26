@@ -22,7 +22,7 @@
 #' check_results
 gp_check <- function(path = ".", checks = all_checkers(),
                      extra_preps = all_prepers(),
-                     extra_checks =all_extra_checkers(),
+                     extra_checks = all_extra_checkers(),
                      quiet = TRUE){
 
   if(is.null(options()$checker)){

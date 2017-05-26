@@ -4,8 +4,8 @@
 \alias{gp_check}
 \title{Wrapper of goodpractice gp}
 \usage{
-gp_check(path = ".", checks = all_checks(), extra_preps = NULL,
-  extra_checks = NULL, quiet = TRUE)
+gp_check(path = ".", checks = all_checkers(), extra_preps = all_prepers(),
+  extra_checks = all_extra_checkers(), quiet = TRUE)
 }
 \arguments{
 \item{path}{Path to a data analysis root.}

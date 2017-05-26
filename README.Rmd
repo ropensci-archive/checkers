@@ -12,9 +12,7 @@ knitr::opts_chunk$set(
 
 
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
-[![MIT Licensed - Copyright 2016 Noam Ross and Jenny Bryan](https://img.shields.io/badge/license-MIT-blue.svg)](https://badges.mit-license.org/)
-[![Linux Build Status](https://travis-ci.org/noamross/checkers.svg?branch=master)](https://travis-ci.org/noamross/checkers)
-[![Coverage Status](https://img.shields.io/codecov/c/github/ropenscilabs/checkers/master.svg)](https://codecov.io/github/ropenscilabs/checkers?branch=master)
+[![Linux Build Status](http://travis-ci.org/noamross/checkers.svg?branch=master)](https://travis-ci.org/noamross/checkers)
 
 checkers
 ========
@@ -25,7 +23,8 @@ checkers
 
 Our full, in-development  review guide is available [here as a google doc](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#).  We categorize checks according to tiers of quality and potential
 degree of automation:
-![](https://github.com/ropenscilabs/checkers/blob/master/figs/compendium.png)
+
+![](figs/compendium.png)
 
 # Automated checks
 
@@ -40,14 +39,42 @@ devtools::install_github('ropenscilabs/goodpractice')
 
 #### Usage
 
+Run `gp_check()` on your analysis directory for a report on common best
+practices for analysis directories.
+
 ```{r}
 library(checkers)
-gp_check(path=system.file("scripts", package="checkers"))
+gp_check(path=system.file("scripts", package="checkers"),
+         checks=c("comments", "version_control"))
 ```
+
+Helper functions allow one to create custom checks for common tasks.  For
+instance, `make_pref_pkg_check()` defines a test for preferred packages. These
+helpers are used with **goodpractice**'s (in-development) API for extensions:
+
+```{r}
+xml_check <- make_pref_pkg_check(unfavored = "XML", favored = "xml2")
+gp_check(path=system.file("scripts", package="checkers"),
+         checks="xml",
+         extra_preps = list(packages=prep_packages),
+         extra_checks = list(xml=xml_check))
+                            
+```
+
+**checkers** has a growing list of default checks but may also be configured
+for personal or group preferences.  A YAML file may be provided to set
+project-, user- or system-wide defaults for checks:
+
+```{r, echo=FALSE, comment=NA}
+cat(paste(readLines(system.file("extdata", "default.yaml", package="checkers")), collapse="\n"))
+```
+
+
 
 
 ---
 
+## Review checklist framework 
 
 ### Automation Levels
 - **Fully automatable:** Can be checked automatically by checkers (CURRENTLY GREEN)
@@ -68,7 +95,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Commenting
 - **Description :** It is important to comment your code so that you can remember what you have written and created. It also allows you to share with other people.
 - **Example :** Check to see if you have commented each code chunk. What is the % of comments contained in your code?
-- **checker packages:** YES could be automated
+- **Automation:** Potential
  
 ### 2.  **Automatable & "Nice to have"**
  
@@ -76,7 +103,7 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Version control    
 - **Description :** It is important to store versions of your code as you program so you can go back to old versions of your analysis. This is important to help you debug and also help with collabration with others using tools like git/github or other version control providers.    
 - **Example :** Check to see if you have a git file    
-- **CheckR packages :** WORKING EXAMPLE AVAILABLE (add link)
+- **Automation:** implemented in **checkers**
  
 ### 3.  **Automatable & "Recommended"**
  
@@ -84,5 +111,5 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Name :** Grammar/Spelling    
 - **Description :** It is important that you have correct spelling and grammar in code and reporting.     
 - **Example :** Check that you have installed gramR *new* packag     
-- **CheckR packages :** gramR (in development) [https://github.com/ropenscilabs/gramr]
+- **CheckR packages :** In development, see (**gramr**)[https://github.com/ropenscilabs/gramr]
 
