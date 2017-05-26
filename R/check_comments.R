@@ -48,7 +48,7 @@ check_well_commented <- make_check(
     paste0(
       "Document your analyses with comments. ",
       trunc(state$scripts$comment_frac*100),
-      "% of lines of your script lines are comments or have comments."
+      "% of lines of your scripts are comments or have comments."
     )
   },
   check = function(state) {
