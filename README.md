@@ -58,12 +58,15 @@ Example best practices in terms of their importance (y-axis) and the degree they
 - **Description :** It is important that you have correct spelling and grammar in code and reporting.     
 - **Example :** Check that you have installed gramR *new* packag     
 - **CheckR packages :** YES gramR is in development
+
+[Full list of checks available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
  
+
 # Vignettes examples
  
 example vignettes ....
-[Full list available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
- 
+
+
 <br><br>
 
 # checkers
