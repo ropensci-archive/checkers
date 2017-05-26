@@ -6,9 +6,13 @@ checkers
 
 Checkers is a framework for reviewing and automated checking of best practices for [research compendia](https://github.com/ropensci/rrrpkg)
 
+## Package to assess analysis + review guide for analysis best practice
+ 
+CheckR is an extension of goodpractise (for building R packages) but for your analysis workflow. This package will provide both automatized checks for best practises as well as a descriptive guide for best practises. The guide categorizes best practises in terms of their imporatance (Tier 1-3) and whether they are automatable.
+
+
 Goals
 -----
-
 -   What is the equivalent of R CMD check? What is the equivalent to the ROpenSci package onboarding process? What is code coverage for data?
 -   What can be automated? What needs human review?
 -   Working product vs. final product?
@@ -16,17 +20,54 @@ Goals
 -   Can you evaluate the git commit messages?
 -   How can I assess my analysis process from data to code to analysis to reporting?
 
-Phases of Analysis
-------------------
-
+# Overview of Analysis 'Best Practise' Guidelines
+ 
+### Phases of Analysis
+ 
 Types of Test/Checks/Assessment groups
+ 
+* Data
+* Script/Code (organization/structure)
+* Package/Organisational
+* Analysis Tasks
+* Visualisation/Reporting
+ 
+## Examples
+ 
+Matrix of best practise examples
+![](https://github.com/ropenscilabs/checkers/blob/master/figs/compendium.png)
+ 
+### 1. **Automatable & "Must have"**
+- **Research phase :** Data
+- **Name :** Commenting
+- **Description :** It is important to comment your code so that you can remember what you have written and created. It also allows you to share with other people.
+- **Example :** Check to see if you have commented each code chunk. What is the % of comments contained in your code?
+- **CheckR packages:** YES could be automated
+ 
+### 2.  **Automatable & "Nice to have"**
+ 
+- **Research phase :** Package/Organisational     
+- **Name :** Version control    
+- **Description :** It is important to store versions of your code as you program so you can go back to old versions of your analysis. This is important to help you debug and also help with collabration with others using tools like git/github or other version control providers.    
+- **Example :** Check to see if you have a git file    
+- **CheckR packages :** YES could be automated
+ 
+### 3.  **Automatable & "Recommendation"**
+ 
+- **Research phase :** Visualisation/Reporting   
+- **Name :** Grammar/Spelling    
+- **Description :** It is important that you have correct spelling and grammar in code and reporting.     
+- **Example :** Check that you have installed gramR *new* packag     
+- **CheckR packages :** YES gramR is in development
+ 
+# Vignettes examples
+ 
+example vignettes ....
+[Full list available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
+ 
+<br><br>
 
--   Data
--   Code
--   Model/Analysis
--   Visualization
-
-checkers
+# checkers
 
 Installation
 ------------
