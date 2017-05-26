@@ -1,3 +1,6 @@
+# To test this:
+# gp(path=".", checks = "comments", extra_preps = list(scripts = prep_scripts), extra_checks = list(comments = check_well_commented))
+
 r_script_files <- function(path) {
 
   r_files <- list.files(path = path,
@@ -52,3 +55,4 @@ check_well_commented <- make_check(
     return(state$scripts$comment_frac > threshold)
   }
 )
+
