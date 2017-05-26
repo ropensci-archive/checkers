@@ -9,15 +9,14 @@ prep_packages = make_prep("packages", function(path, quiet) {
 make_pref_pkg_check <- function(unfavored, favored) {
 
   make_check(
-    description = paste0(unfavored,
-                         " is an unfavored package"),
+    description = paste0("Unfavored packages:",
+                         paste(unfavored, collapse=", ")),
     tags = character(0),
     preps = c("packages"),
 
     gp = function(state) {
       paste0(
-        "Use preferred packages. You are using ", unfavored,
-        ". Preferred alternatives are: ",
+        "Use preferred packages.", favored, " is preferred to ",
         paste0(favored, collapse = ", "), ".")
     },
     check = function(state) {
