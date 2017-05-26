@@ -1,0 +1,4 @@
+package: "assertthat" #using this package?
+favored_packages: ["xml2","XML"] #favored vs older
+if_this_than_that: ["gam","gam.check"] #if gam than gam.check
+comment_threshold: 0.05
