@@ -12,7 +12,9 @@ URL: https://github,com/ropenscilabs/checkers
 BugReports: https://github,com/ropenscilabs/checkers/issues
 RoxygenNote: 6.0.1
 Imports:
-    goodpractice ,
+    goodpractice,
+    lintr,
+    rex,
     purrr,
     yaml
 Remotes:

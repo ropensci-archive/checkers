@@ -2,6 +2,7 @@
 
 export(check_version_control)
 export(check_well_commented)
+export(prep_lint_dir)
 export(gp_check)
 export(load_config)
 export(prep_scripts)
