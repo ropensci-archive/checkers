@@ -1,4 +1,13 @@
 package: "assertthat" #using this package?
+goodpractice:
+  ["lintr_assignment_linter",
+  "lintr_line_length_linter",
+  "lintr_trailing_semicolon_linter" ,
+  "lintr_attach_detach_linter",
+  "lintr_setwd_linter",
+  "lintr_sapply_linter",
+  "lintr_library_require_linter",
+  "lintr_seq_linter"]
 favored_packages: ["xml2","XML"] #favored vs older
 if_this_than_that: ["gam","gam.check"] #if gam than gam.check
 comment_threshold: 0.05
