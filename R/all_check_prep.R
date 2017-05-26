@@ -20,8 +20,24 @@ all_checkers <- function(){
 #' @examples
 #'
 all_extra_checkers <- function(){
-  return(list("comments"=check_well_commented,
-                "version_control"=check_version_control))
+  main_defaults <- list("comments"=check_well_commented,
+                        "version_control"=check_version_control)
+
+  pref_list <- options()$checkers[["make_pref_pkg_check"]]
+
+  if(length(pref_list) > 0){
+
+    for(i in names(pref_list)){
+      favored <- pref_list[[i]]$favored
+      unfavored <- pref_list[[i]]$unfavored
+      check_fun <- make_pref_pkg_check(favored = favored,
+                                       unfavored = unfavored)
+      main_defaults[[i]] <- check_fun
+    }
+
+  }
+
+  return(main_defaults)
 }
 
 #' @export
