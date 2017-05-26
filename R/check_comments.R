@@ -10,9 +10,10 @@ r_script_files <- function(path) {
     grep("^(R|tests)\\/", r_files, invert=TRUE)
     ]
 
-  file.path(r_scripts)
+  file.path(path, r_scripts)
 }
 
+#' @importFrom utils getParseData
 frac_comments <- function(file) {
   pp <- parse(file=file, keep.source = TRUE)
   pd <- getParseData(pp)
@@ -51,7 +52,7 @@ check_well_commented <- make_check(
     )
   },
   check = function(state) {
-    threshold <- 0.1
+    threshold <- checker$options$comment_threshold
     return(state$scripts$comment_frac > threshold)
   }
 )

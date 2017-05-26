@@ -1,4 +1,4 @@
-checker_config <- new.env(parent = emptyenv())
+checker <- new.env(parent = emptyenv())
 
 
 #' @title Load checkers config
@@ -20,7 +20,7 @@ load_config = function(filename) {
 
   checkers <- yaml.load_file(filename)
 
-  checker_config$options <- checkers
+  checker$options <- checkers
 }
 
 
