@@ -8,10 +8,16 @@ knitr::opts_chunk$set(
   fig.height = 8)
 ```
 
+
+[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![MIT Licensed - Copyright 2016 Noam Ross and Jenny Bryan](https://img.shields.io/badge/license-MIT-blue.svg)](https://badges.mit-license.org/)
+[![Linux Build Status](https://travis-ci.org/noamross/checkers.svg?branch=master)](https://travis-ci.org/noamross/checkers)
+[![Coverage Status](https://img.shields.io/codecov/c/github/ropenscilabs/checkers/master.svg)](https://codecov.io/github/ropenscilabs/checkers?branch=master)
+
 # checkers
 
-Package to assess analysis + review guide for analysis best practice
-
+Checkers is a framework for reviewing and automated checking of best practices
+for [research compendia](https://github.com/ropensci/rrrpkg)
 
 ## Goals
 
@@ -31,13 +37,6 @@ Types of Test/Checks/Assessment groups
 * Code 
 * Model/Analysis 
 * Visualization
-
-> checkers
-
-[![Linux Build Status](https://travis-ci.org/noamross/checkers.svg?branch=master)](https://travis-ci.org/noamross/checkers)
-[![](http://www.r-pkg.org/badges/version/checkers)](http://www.r-pkg.org/pkg/checkers)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/checkers)](http://www.r-pkg.org/pkg/checkers)
-
 
 checkers
 

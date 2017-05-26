@@ -23,3 +23,6 @@ Remotes:
     noamross/goodpractice
 Suggests: 
     testthat
+Suggests:
+    testthat,
+    covr
