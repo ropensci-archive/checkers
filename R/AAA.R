@@ -17,7 +17,7 @@ load_config = function(filename) {
 
   checkers <- yaml.load_file(filename)
 
-  options(checker = list(options = checkers))
+  options(checkers = checkers)
 }
 
 
