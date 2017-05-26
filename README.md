@@ -23,16 +23,14 @@ Goals
 # Overview of Analysis 'Best Practise' Guidelines
  
 ### Phases of Analysis
- 
-Types of Test/Checks/Assessment groups
- 
+
 * Data
 * Script/Code (organization/structure)
 * Package/Organisational
 * Analysis Tasks
 * Visualisation/Reporting
 
-## [Full list of checks available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
+### [Full list of checks available](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#)
  
  
 ## Examples
