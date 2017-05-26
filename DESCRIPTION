@@ -20,6 +20,9 @@ Imports:
     purrr,
     yaml
 Remotes:
-    MangoTheCat/goodpractice
+    noamross/goodpractice
 Suggests: 
     testthat
+Suggests:
+    testthat,
+    covr

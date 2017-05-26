@@ -52,7 +52,7 @@ check_well_commented <- make_check(
     )
   },
   check = function(state) {
-    threshold <- checker$options$comment_threshold
+    threshold <- options()$checker[["comment_threshold"]]
     return(state$scripts$comment_frac > threshold)
   }
 )

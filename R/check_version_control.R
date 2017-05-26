@@ -27,6 +27,11 @@ prep_version_control <- make_prep("version_control", function(path, quiet) {
 
 #' @export
 #' @importFrom goodpractice make_check
+#' @examples
+#' gp_check(path=system.file("scripts", package="checkers"),
+#          checks = "version_control",
+#   extra_preps = list(version_control = prep_version_control),
+#   extra_checks = list(version_control = check_version_control))
 check_version_control <- make_check(
 
   description = "Project is under version control",
@@ -34,7 +39,7 @@ check_version_control <- make_check(
   preps = c("version_control"),
   gp = function(state) {
     paste0(
-      "Place your project under version control.",
+      "Place your project under version control. ",
       "You are using neither git nor svn. See http://happygitwithr.com/ for more info"
     )
   },
