@@ -15,10 +15,18 @@ test_that("checkers works", {
            extra_checks = list(version_control = check_version_control))
   expect_type(check_results, "list")
 
-  check_all_results <- gp_check(path=system.file("scripts", package="checkers"),
-                              checks = all_checkers(),
-                              extra_preps = all_prepers(),
-                              extra_checks = all_extra_checkers())
-  expect_type(check_all_results, "list")
+  lintr_stuff <- gp_check(system.file("scripts", package="checkers"),
+           checks = "lintr_assignment_linter",
+           extra_checks = list(), extra_preps = list(lintr=prep_lint_dir))
+  expect_type(lintr_stuff, "list")
 
+})
+
+
+test_that("check_all", {
+  check_all_results <- gp_check(path=system.file("scripts", package="checkers"),
+                                checks = all_checkers(),
+                                extra_preps = all_prepers(),
+                                extra_checks = all_extra_checkers())
+  expect_type(check_all_results, "list")
 })

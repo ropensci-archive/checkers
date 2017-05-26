@@ -2,7 +2,14 @@
 #' @examples
 #'
 all_checkers <- function(){
-  return(c("comments","version_control"))
+
+  main_defaults <- c("comments","version_control")
+
+  if(length(options()$checkers[["goodpractice"]]) > 0){
+    main_defaults <- c(main_defaults, options()$checkers[["goodpractice"]])
+  }
+
+  return(main_defaults)
 }
 
 #' @export
@@ -18,5 +25,6 @@ all_extra_checkers <- function(){
 #'
 all_prepers <- function(){
   return(list("scripts" = prep_scripts,
-              "version_control" = prep_version_control))
+              "version_control" = prep_version_control,
+              "lintr" = prep_lint_dir))
 }
