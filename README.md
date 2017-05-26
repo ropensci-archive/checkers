@@ -3,12 +3,8 @@
 
 checkers
 ========
-
-Checkers is a framework for reviewing and automated checking of best practices for [research compendia](https://github.com/ropensci/rrrpkg).
-
-## Package to assess analysis + review guide for analysis best practice
  
-`checkers` is an extension of `goodpractice` (for building R packages) but for your analysis workflow. This package will provide both automatized checks for best practises as well as a descriptive guide for best practises. The guide categorizes best practises in terms of their importance (Tier 1-3) and whether they are automatable.
+**checkers** is an extension of `goodpractice` (for building R packages) but for your analysis workflow. This package will provide both automatized checks for best practises as well as a descriptive guide for best practises. The guide categorizes best practises in terms of their importance (Tier 1-3) and whether they are automatable.
 
 
 Goals

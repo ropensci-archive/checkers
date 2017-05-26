@@ -20,8 +20,10 @@
 #'          extra_preps = list(scripts = prep_scripts),
 #'          extra_checks = list(comments = check_well_commented))
 #' check_results
-gp_check <- function(path = ".", checks = all_checks(), extra_preps = NULL,
-                     extra_checks = NULL, quiet = TRUE){
+gp_check <- function(path = ".", checks = all_checkers(),
+                     extra_preps = all_prepers(),
+                     extra_checks =all_extra_checkers(),
+                     quiet = TRUE){
 
   if(is.null(options()$checker)){
     load_config()
