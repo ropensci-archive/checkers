@@ -23,7 +23,7 @@
 gp_check <- function(path = ".", checks = all_checks(), extra_preps = NULL,
                      extra_checks = NULL, quiet = TRUE){
 
-  if (is.null(checker$options)) {
+  if(is.null(options()$checker)){
     load_config()
   }
 
