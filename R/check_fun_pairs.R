@@ -1,8 +1,9 @@
 # To test this:
-# x <- gp_check(path=system.file("scripts", package="checkers"),
-#          checks = "fun_pairs",
-#   extra_preps = list(version_control = prep_fun_pairs),
-#   extra_checks = list(version_control = check_fun_pairs))
+# check_gam <- make_fun_pair_check("gam", "gam.check")
+# gp_check(path=system.file("scripts", package="checkers"),
+#          checks = "check_gam",
+#   extra_preps = list(functions = prep_functions),
+#   extra_checks = list(check_gam = check_gam))
 
 
 #' @importFrom utils getParseData
@@ -13,17 +14,33 @@ get_functions <- function(f) {
     script_funs
 }
 
-    
-
-
 #' @export
 #' @importFrom goodpractice make_prep
-prep_fun_pairs <- make_prep("fun_pairs", function(path, quiet) {
+prep_functions <- make_prep("functions", function(path, quiet) {
     scripts <- r_script_files(path)
-    funs <- do.call(rbind, lapply(scripts, get_functions))
-    funs <- unique(funs)
-    return(list(funs = funs))
+    funs <- unique(unlist(lapply(scripts, get_functions)))
+    return(funs)
 })
+
+#' @export
+make_fun_pair_check <- function(fun1, fun2) {
+
+  make_check(
+    description = paste0("Use", fun2, " if you use ", fun1),
+    tags = character(0),
+    preps = c("functions"),
+
+    gp = function(state) {
+      paste0(
+        "Follow-up analyses with appropriate checks. You run `", fun1,
+        "()` but never run `", fun2, "()`."
+      )
+    },
+    check = function(state) {
+      !(fun1 %in% state$functions && !(fun2 %in% state$functions))
+    }
+  )
+}
 
 
 
