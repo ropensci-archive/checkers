@@ -33,8 +33,8 @@ Types of Test/Checks/Assessment groups
 * Visualisation/Reporting
  
 ## Examples
-
-![Example best practices in terms of their importance (y-axis) and the degree they can be automated (x-axis).](https://github.com/ropenscilabs/checkers/blob/master/figs/compendium.png)
+Example best practices in terms of their importance (y-axis) and the degree they can be automated (x-axis).
+![](https://github.com/ropenscilabs/checkers/blob/master/figs/compendium.png)
  
 ### 1. **Automatable & "Must have"**
 - **Research phase :** Data
