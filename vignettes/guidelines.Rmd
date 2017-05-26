@@ -169,16 +169,23 @@ vignette: >
 ## Descriptive plots (T1, Semi-Auto)
 
 ### Examples
+  * histograms of variable distributions
+  * correlations between variables
 
 ## Exploratory Data Analysis (T1, Semi-Auto)
 
 ### Examples
 
 ## Appropriately Conveyed Data Types (T1, Semi-Auto)
+The structure of your plot should communicate the structure of your data. 
 
 ### Examples
+  * If your predictor variable is continuous, your x-axis should also be continous (not a bar plot).
+  * If your factors have a meaningful order, the plot shuold reflect this order.
 
 ## Clear Structure and Flow (T1, Automatic)
+
+Does your code follow a logical structure and flow? 
 
 ### Examples
 
@@ -187,9 +194,11 @@ vignette: >
 ### Examples
 
 ## Remove chartjunk (T3, Human)
-
 ### Examples
+  * redundant legends
+  * distracting backgrounds
 
 ## Grammar and Spelling (T3, Auto)
 
-### Examples
+Check the text of your analysis for grammar and spelling. This can be automated using the (in progress) [`gramr` package](https://github.com/ropenscilabs/gramr) and the spell checker in RStudio.
+
