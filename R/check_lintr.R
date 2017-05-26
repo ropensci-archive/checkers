@@ -25,9 +25,10 @@ lint_directory = function (path = ".", relative_path = TRUE, ...)
 #' function so as to lint the entire directory rather than just package
 #' files.
 #' @export
+#' @import lintr
 prep_lint_dir <- make_prep("lintr", function(path, quiet) {
   path <- normalizePath(path)
-  suppressMessages(
+  suppressWarnings(
     lintr <- lint_directory(path, linters = goodpractice:::linters_to_lint)
   )
   return(lintr)

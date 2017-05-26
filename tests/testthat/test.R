@@ -20,10 +20,19 @@ test_that("checkers works", {
            extra_checks = list(), extra_preps = list(lintr=prep_lint_dir))
   expect_type(lintr_stuff, "list")
 
+
+  lint_checks <- grep("lintr", goodpractice::all_checks())
+  linters <- gp_check(path=system.file("scripts", package="checkers"),
+                      checks = goodpractice::all_checks()[lint_checks],
+                      extra_checks = list(),
+                      extra_preps = list(lintr = prep_lint_dir))
+  expect_type(check_results, "list")
+
 })
 
 
 test_that("check_all", {
+
   check_all_results <- gp_check(path=system.file("scripts", package="checkers"),
                                 checks = all_checkers(),
                                 extra_preps = all_prepers(),

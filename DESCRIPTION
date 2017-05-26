@@ -20,9 +20,9 @@ Imports:
     purrr,
     yaml
 Remotes:
-    noamross/goodpractice
-Suggests: 
-    testthat
+    MangoTheCat/goodpractice
 Suggests:
     testthat,
-    covr
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
