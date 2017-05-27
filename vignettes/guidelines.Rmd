@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for Analysis Best Practice"
-author: "Jennifer Thompson, Nicholas Tierney, Alice Daish, Molly Lewis, Noam Ross, Laura DeCiccio, Nistara Randhawa"
+author: "Jennifer Thompson, Nicholas Tierney, Alice Daish, Molly Lewis, Noam Ross, Laura DeCicco, Nistara Randhawa"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -11,28 +11,83 @@ vignette: >
 
 <!-- Try and add links to the tags (T1, T2, T3, Auto, Semi-Auto, human) -->
 <!-- http://pandoc.org/MANUAL.html#header-identifiers -->
+*Review guide for analysis best practice, developed at [rOpenSci unconf 2017](unconf17.ropensci.org)*
+
+*Related: [checkers](https://github.com/ropenscilabs/checkers) - a package to assess analysis*
+
+# Rationale
+
+While every analysis is different, there are common elements which can strengthen validity, reproducibility, and reusability. These guidelines describe, prioritize and assist analysts in developing the strongest analyses and workflows possible while remaining flexible for a wide variety of applications and contexts.
+
+# Terminology
+
+## Tiers
+Tiers are in descending order of importance: Focus on Tier 1 elements, then Tier 2, then Tier 3.
+
+- Tier 1: *Must Have* - These elements are required for reliable and trustworthy analyses.
+- Tier 2: *Nice to Have* - These elements are recommended for best practice and reproducibility and should be strongly considered.
+- Tier 3: *Recommended* - These elements are ideal best practice.
+
+## Automation
+- *Fully automatic*: Included as elements of [checkers](https://github.com/ropenscilabs/checkers).
+- *Semi-automatic*: Can be implemented as custom checks in [checkers](https://github.com/ropenscilabs/checkers).
+- *Human-powered*: Cannot be automated. Analyst uses guidelines to make sure analysis and report fit best practice for specific context.
+
+# Prerequisite
+
+Clear research question(s) which can be answered by your available data.
+ 
+*This might include “What patterns do we see?” and other exploratory analyses as well as more formal hypotheses, but questions and analysis plans should be clearly defined.*
 
 # Data
 
-## Know your Data (T1 Human)
+## Know your Data/Data Structure (T1, Human)
+
+In order to conduct robust analyses and make reliable inferences, we have to understand our data.
 
 ### Examples
+- Is a data dictionary/codebook or other metadata available?
+- Are column names reasonable - meaningful with no special characters?
+- Is data [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html), with all information contained in rows/columns (not rownames or labels)?
+- Have you visualized your data to better understand missingness and variable distributions?
+
+### Package Suggestions
+
+[dplyr](http://dplyr.tidyverse.org/) and [tidyr](http://tidyr.tidyverse.org/) for tidying data; [visdat](https://github.com/njtierney/visdat) for visualizing missingness
 
 ## Quality Checks (T1, Human)
 
-### Examples
+Check data for reasonable values.
+
+### Examples of unreasonable values:
+- Pregnant males
+- Lab measurements outside biological limits
+- Variables which should be continuous containing character values (`1,239`)
+
+### Package Suggestions
+
+[assertr](https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html)
 
 ## Rawest data form (T1, Human)
 
+To retain as much information and avoid as much duplication of effort and human error as possible, data should be loaded in the form closest to its original state as is reasonable.
+
 ### Examples
+
+- Downloading data from the web directly via API vs adding in an additional export step
+- Comma separated files vs formatted spreadsheets
+- Raw subject-level data rather than summary statistics
 
 ## Check and control for updated source data (T2, Semi-Auto)
 
+Do the column names and dimensions in your current data files match an expected set of names/dimensions? If rows or column are added or deleted, your results and the stability of your scripts and models might be affected.
+
 ### Examples
+- Check `dim()` of all datasets
 
 ## Ownership clearly identified (T3, Human)
 
-### Examples
+At minimum, the source of the data should be noted, along with any necessary acknowledgements. If the data is publicly available and licensed, the license should be included.
 
 # Scripts and Code
 
@@ -169,23 +224,16 @@ vignette: >
 ## Descriptive plots (T1, Semi-Auto)
 
 ### Examples
-  * histograms of variable distributions
-  * correlations between variables
 
 ## Exploratory Data Analysis (T1, Semi-Auto)
 
 ### Examples
 
 ## Appropriately Conveyed Data Types (T1, Semi-Auto)
-The structure of your plot should communicate the structure of your data. 
 
 ### Examples
-  * If your predictor variable is continuous, your x-axis should also be continous (not a bar plot).
-  * If your factors have a meaningful order, the plot shuold reflect this order.
 
 ## Clear Structure and Flow (T1, Automatic)
-
-Does your code follow a logical structure and flow? 
 
 ### Examples
 
@@ -194,11 +242,9 @@ Does your code follow a logical structure and flow?
 ### Examples
 
 ## Remove chartjunk (T3, Human)
+
 ### Examples
-  * redundant legends
-  * distracting backgrounds
 
 ## Grammar and Spelling (T3, Auto)
 
-Check the text of your analysis for grammar and spelling. This can be automated using the (in progress) [`gramr` package](https://github.com/ropenscilabs/gramr) and the spell checker in RStudio.
-
+### Examples
