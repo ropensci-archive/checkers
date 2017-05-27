@@ -4,7 +4,7 @@
 checkers
 ========
 
-**checkers** is a framework for reviewing analysis projects. This package provides both automatied checks for best practises as well as a descriptive guide for best practices.
+**checkers** is a framework for reviewing analysis projects. This package provides both automated checks for best practises as well as a descriptive guide for best practices.
 
 Analysis Review Criteria
 ========================
