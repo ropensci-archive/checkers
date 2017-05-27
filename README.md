@@ -6,12 +6,12 @@ checkers
 
 **checkers** is a framework for reviewing analysis projects. This package provides both automatied checks for best practises as well as a descriptive guide for best practices.
 
-Review Criteria
-===============
+Analysis Review Criteria
+========================
 
-Our full, in-development review guide is available [here as a google doc](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#). We categorize checks according to tiers of quality and potential degree of automation:
+Our full, in-development analysis review guide is available [here as a google doc](https://docs.google.com/document/d/1OYcWJUk-MiM2C1TIHB1Rn6rXoF5fHwRX-7_C12Blx8g/edit#). We categorize checks according to tiers of 'best practise' and potential degree of automation:
 
-![](figs/compendium.png)
+Example check 'best practices' in terms of their importance (y-axis) and the degree they can be automated (x-axis). ![](figs/compendium.png)
 
 Automated checks
 ================
@@ -105,10 +105,8 @@ Review checklist framework
 -   **Nice to have** : These elements are recommended for best practice and reproducibility and should be strongly considered.
 -   **Recommended** : These elements are ideal best practice.
 
-Examples
---------
-
-Example best practices in terms of their importance (y-axis) and the degree they can be automated (x-axis).
+Automatable examples
+--------------------
 
 ### 1. **Automatable & "Must have"**
 
@@ -132,4 +130,4 @@ Example best practices in terms of their importance (y-axis) and the degree they
 -   **Name :** Grammar/Spelling
 -   **Description :** It is important that you have correct spelling and grammar in code and reporting.
 -   **Example :** Check that you have installed gramR *new* packag
--   **CheckR packages :** In development, see (**gramr**)\[<https://github.com/ropenscilabs/gramr>\]
+-   **Automation:** In development, see (**gramr**)\[<https://github.com/ropenscilabs/gramr>\]
