@@ -1,4 +1,3 @@
-package: "assertthat" #using this package?
 goodpractice:
   ["lintr_assignment_linter",
   "lintr_line_length_linter",
@@ -15,5 +14,8 @@ make_pref_pkg_check:
   JSON:
     favored: jsonlite
     unfavored: rjson
-if_this_than_that: ["gam","gam.check"] #if gam than gam.check
+if_this_than_that:
+  gam:
+    if_this: gam
+    needs_that: gam.check
 comment_threshold: 0.05
