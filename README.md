@@ -21,7 +21,9 @@ The **checkers** package runs automated tests, using extensions on the [**goodpr
 #### Installation:
 
 ``` r
-devtools::install_github('ropenscilabs/goodpractice')
+devtools::install_github('MangoTheCat/goodpractice')
+
+devtools::install_github('ropenscilabs/checkers')
 ```
 
 #### Usage
@@ -30,45 +32,44 @@ Run `gp_check()` on your analysis directory for a report on common best practice
 
 ``` r
 library(checkers)
-gp_check(path=system.file("scripts", package="checkers"),
-         checks=c("comments", "version_control"))
+gp_check(path = system.file("scripts", package = "checkers"),
+         checks = c("comments", "version_control"))
 ```
 
     #> Preparing: scripts
 
     #> Preparing: version_control
 
-    #> ── GP scripts ─────────────────────────────────────────────────────────────
+    #> -- GP scripts -------------------------------------------------------------
     #> 
     #> It is good practice to
     #> 
-    #>   ✖ Place your project under version control. You are using
+    #>   <U+2716> Place your project under version control. You are using
     #>     neither git nor svn. See http://happygitwithr.com/ for more
     #>     info
-    #> ───────────────────────────────────────────────────────────────────────────
+    #> ---------------------------------------------------------------------------
 
 Helper functions allow one to create custom checks for common tasks. For instance, `make_pref_pkg_check()` defines a test for preferred packages. These helpers are used with **goodpractice**'s (in-development) API for extensions:
 
 ``` r
 xml_check <- make_pref_pkg_check(unfavored = "XML", favored = "xml2")
-gp_check(path=system.file("scripts", package="checkers"),
-         checks="xml",
-         extra_preps = list(packages=prep_packages),
-         extra_checks = list(xml=xml_check))
+gp_check(path = system.file("scripts", package = "checkers"),
+         checks = "xml",
+         extra_preps = list(packages = prep_packages),
+         extra_checks = list(xml = xml_check))
 ```
 
     #> Preparing: packages
 
-    #> ── GP scripts ─────────────────────────────────────────────────────────────
+    #> -- GP scripts -------------------------------------------------------------
     #> 
     #> It is good practice to
     #> 
-    #>   ✖ Use preferred packages. xml2 is preferred to XML.
-    #> ───────────────────────────────────────────────────────────────────────────
+    #>   <U+2716> Use preferred packages. xml2 is preferred to XML.
+    #> ---------------------------------------------------------------------------
 
-**checkers** has a growing list of default checks but may also be configured for personal or group preferences. A YAML file may be provided to set project-, user- or system-wide defaults for checks:
+**checkers** has a growing list of default checks but may also be configured for personal or group preferences. A YAML file may be provided to set project-, user-, or system-wide defaults for checks:
 
-    package: "assertthat" #using this package?
     goodpractice:
       ["lintr_assignment_linter",
       "lintr_line_length_linter",
@@ -85,7 +86,10 @@ gp_check(path=system.file("scripts", package="checkers"),
       JSON:
         favored: jsonlite
         unfavored: rjson
-    if_this_than_that: ["gam","gam.check"] #if gam than gam.check
+    if_this_than_that:
+      gam:
+        if_this: gam
+        needs_that: gam.check
     comment_threshold: 0.05
 
 ------------------------------------------------------------------------
@@ -101,33 +105,33 @@ Review checklist framework
 
 ### Tiers
 
--   **Must have** : These elements are required for reliable and trustworthy analyses.
--   **Nice to have** : These elements are recommended for best practice and reproducibility and should be strongly considered.
--   **Recommended** : These elements are ideal best practice.
+-   **Must have:** These elements are required for reliable and trustworthy analyses.
+-   **Nice to have:** These elements are recommended for best practice and reproducibility and should be strongly considered.
+-   **Recommended:** These elements are ideal best practice.
 
 Automatable examples
 --------------------
 
 ### 1. **Automatable & "Must have"**
 
--   **Research phase :** Data
--   **Name :** Commenting
--   **Description :** It is important to comment your code so that you can remember what you have written and created. It also allows you to share with other people.
+-   **Research phase:** Data
+-   **Name:** Commenting
+-   **Description:** It is important to comment your code so that you can remember what you have written and created. It also allows you to share with other people.
 -   **Example :** Check to see if you have commented each code chunk. What is the % of comments contained in your code?
 -   **Automation:** Potential
 
 ### 2. **Automatable & "Nice to have"**
 
--   **Research phase :** Package/Organisational
--   **Name :** Version control
--   **Description :** It is important to store versions of your code as you program so you can go back to old versions of your analysis. This is important to help you debug and also help with collabration with others using tools like git/github or other version control providers.
--   **Example :** Check to see if you have a git file
+-   **Research phase:** Package/Organisational
+-   **Name:** Version control
+-   **Description:** It is important to store versions of your code as you program so you can go back to old versions of your analysis. This is important to help you debug and also help with collabration with others using tools like git/github or other version control providers.
+-   **Example:** Check to see if you have a git file
 -   **Automation:** implemented in **checkers**
 
 ### 3. **Automatable & "Recommended"**
 
--   **Research phase :** Visualisation/Reporting
--   **Name :** Grammar/Spelling
--   **Description :** It is important that you have correct spelling and grammar in code and reporting.
--   **Example :** Check that you have installed gramR *new* packag
--   **Automation:** In development, see (**gramr**)\[<https://github.com/ropenscilabs/gramr>\]
+-   **Research phase:** Visualisation/Reporting
+-   **Name:** Grammar/Spelling
+-   **Description:** It is important that you have correct spelling and grammar in code and reporting.
+-   **Example:** Check that you have installed gramR *new* package
+-   **Automation:** In development, see [**gramr**](https://github.com/ropenscilabs/gramr)
