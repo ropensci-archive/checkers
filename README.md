@@ -130,4 +130,4 @@ Automatable examples
 -   **Name :** Grammar/Spelling
 -   **Description :** It is important that you have correct spelling and grammar in code and reporting.
 -   **Example :** Check that you have installed gramR *new* packag
--   **Automation:** In development, see (**gramr**)\[<https://github.com/ropenscilabs/gramr>\]
+-   **Automation:** In development, see [**gramr**](https://github.com/ropenscilabs/gramr)
