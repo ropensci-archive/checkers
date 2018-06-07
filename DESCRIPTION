@@ -10,8 +10,8 @@ Authors@R: c( person("Noam", "Ross", role =  c("aut","cre"),
 Description: Package to assess analysis + review guide for analysis best practice
 License: MIT + file LICENSE
 LazyData: true
-URL: https://github,com/ropenscilabs/checkers
-BugReports: https://github,com/ropenscilabs/checkers/issues
+URL: https://github.com/ropenscilabs/checkers
+BugReports: https://github.com/ropenscilabs/checkers/issues
 RoxygenNote: 6.0.1
 Imports:
     goodpractice,
