@@ -1,6 +1,10 @@
 ---
 output: github_document
 ---
+
+checkers
+========
+
 ```{r, setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
@@ -10,11 +14,8 @@ knitr::opts_chunk$set(
   fig.height = 8)
 ```
 
-
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.org/ropenscilabs/checkers.svg?branch=master)](https://travis-ci.org/ropenscilabs/checkers)
-checkers
-========
  
 **checkers** is a framework for reviewing analysis projects. This package  provides both automatied checks for best practises as well as a descriptive guide for best practices. 
 
