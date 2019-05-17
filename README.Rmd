@@ -34,7 +34,7 @@ The **checkers** package runs automated tests, using extensions on the
 #### Installation:
 
 ```r
-devtools::install_github('ropenscilabs/goodpractice')
+devtools::install_github('ropenscilabs/checkers')
 ```
 
 #### Usage
